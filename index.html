@@ -1,49 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Effects SDK - Electron Integration Sample</title>
-</head>
-<body>
-
-<!-- <canvas id="testCanvas" width="1280" height="720"></canvas> -->
-<video id="testVideo" controls width="720" autoplay></video>
-
-<script src="tsvb-web.js?v=1.1.4"></script>
-
-<script>
-
-    const sdk = new window.tsvb('{CUSTOMER_ID}', window.inferer);
-
-    //let canvas = document.getElementById('testCanvas');
-    let video = document.getElementById('testVideo');
-
-    sdk.onReady = () => {
-        sdk.run();
-        sdk.setSegmentationPreset('quality');
-        sdk.showFps();
-        sdk.enableFrameSkipping();
-        sdk.setBackground('image-background.jpg');
-        console.log('SDK ready let\'s run it');
-    }
-
-    window.addEventListener('load', function () {
-        sdk.clear();
-        navigator.mediaDevices.getUserMedia({ video: {
-                width: 640,
-                height: 480
-            } }).then(stream => {
-            sdk.useStream(stream);
-
-            //draw sdk results to canvas
-            //sdk.toCanvas(canvas);
-
-            //draw sdk results to MediaStream
-            video.srcObject = sdk.getStream();
-        });
-    })
-
-</script>
-
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; worker-src blob:; style-src 'self' 'unsafe-inline'; connect-src 'self' https://effectssdk.com;">
+    <title>Electron + Vite + Vue</title>
+    <script type='module' src="/src/tsvb-web.js?v=1.1.4"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>
