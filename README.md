@@ -37,7 +37,7 @@ To receive a new trial Customer ID please fill in the contact form on [effectssd
 - Color grading - **in progress**
 
 ## Application Structure
-
+```sh
 ├─┬ dist-electron
 │ ├─┬ main
 │ │ └── index.js    > Compiled Electron-Main
@@ -62,6 +62,7 @@ To receive a new trial Customer ID please fill in the contact form on [effectssd
 ├── tsconfig.json
 ├── vite.config.ts
 └── electron-builder.json5
+```
 
 - `dist-electron/` - This folder contains the compiled files for your Electron application. It contains two subfolders: `main/` and `preload/`.
   - `main/` - This folder contains the `index.js` file, which is the entry point for your Electron main process.
