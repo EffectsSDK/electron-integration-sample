@@ -15,6 +15,10 @@
 
     const sdk = new window.tsvb('{CUSTOMER_ID}', window.inferer);
 
+    sdk.config({
+          sdk_url: "./sdk/" //configure SDK to load models locally
+        }
+    );
     //let canvas = document.getElementById('testCanvas');
     let video = document.getElementById('testVideo');
 
