@@ -15,6 +15,11 @@
 
     const sdk = new window.tsvb('{CUSTOMER_ID}', window.inferer);
 
+    // set callbacks
+    sdk.onError((eObj) => {
+        console.log(eObj.message);
+    });
+
     sdk.config({
           sdk_url: "./sdk/" //configure SDK to load models locally
         }
