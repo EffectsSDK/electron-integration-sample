@@ -14,7 +14,7 @@
 <script>
 
     const sdk = new window.tsvb('{CUSTOMER_ID}', window.inferer);
-
+    window.sdk = sdk;
     // set callbacks
     sdk.onError((eObj) => {
         console.log(eObj.message);
@@ -29,8 +29,7 @@
 
     sdk.onReady = () => {
         sdk.run();
-        sdk.setSegmentationPreset('quality');
-        sdk.enableFrameSkipping();
+        sdk.showFps();
         sdk.setBackground('image-background.jpg');
         console.log('SDK ready let\'s run it');
     }

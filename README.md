@@ -17,12 +17,12 @@ Windows, macOS, Linux (Astra Common Edition, RedOS, Ubuntu 16-20)
 ## Obtaining Effects SDK Customer ID
 Effects SDK Customer ID is required to get SDK working.
 
-To receive a new trial Customer ID please fill in the contact form on [effectssdk.com](https://effectssdk.com/contacts) website.
+To receive a new trial Customer ID please fill in the contact form on [effectssdk.ai](https://effectssdk.ai/contacts) website.
 
 ## Techical Details
 
 - CUSTOMER_ID should be provided to the SDK constructor.
-- SDK has 3 speed/quality presets (different segmentationn models).
+- SDK has 4 speed/quality presets (different segmentationn models).
 - To improve output FPS SDK has ability to skip the frames.
 - Segmentation is implemented as a native C++ module.
 
@@ -37,9 +37,10 @@ To receive a new trial Customer ID please fill in the contact form on [effectssd
 - Layouts - **implemented**
 - One basic Lower-Third - **implemented**
 - Overlays - **implemented**
-- New Lower-Thirds (5) - **in progress**
-- Color filters - **in progress**
-- Low-light mode - **in progress**
+- New Lower-Thirds (5) - **implemented**
+- Color filters - **implemented**
+- Low-light mode - **implemented**
+- Video clarity/Sharpness - **in progress**
 
 ## Environment setup and local run
 
