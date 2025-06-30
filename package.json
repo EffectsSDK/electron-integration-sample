@@ -1,6 +1,6 @@
 {
   "name": "effectssdk-demo-sample",
-  "version": "3.4.2",
+  "version": "3.5.6",
   "description": "Add real-time AI video enhancement that makes video meeting experience more effective and comfortable to your application in a few hours.",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "author": "EffectsSDK",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^19.0.0",
+    "electron": "36.0.0",
     "electron-packager": "^15.5.1"
   }
 }
