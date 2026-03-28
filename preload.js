@@ -1,7 +1,14 @@
-const { contextBridge, ipcRenderer } = require('electron')
-const tsvb = require("./libs/win/tsvb");
-//const tsvb = require("./libs/linux/TSVB");
-//const tsvb = require("./libs/mac/tsvb");
+const { contextBridge } = require('electron')
+
+const tsvbFolder = {
+     win32: 'win',
+     linux: 'linux',
+     darwin: 'mac'
+};
+
+const folder = tsvbFolder[process.platform];
+
+const tsvb = require(`./libs/${folder}/TSVB`);
 
 const inference = new tsvb.InferenceSession();
 let port;

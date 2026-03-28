@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager . effectssdk-demo-sample --platform win32 --arch x64 --out dist/"
+    "build": "electron-packager . effectssdk-demo-sample --out dist/"
   },
   "author": "EffectsSDK",
   "license": "MIT",
