@@ -48,7 +48,7 @@
 
             //draw sdk results to MediaStream
             video.srcObject = sdk.getStream();
-        });
+        }).catch(err => console.error('getUserMedia failed:', err.name, err.message));
     })
 
 </script>

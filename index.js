@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, systemPreferences } = require("electron");
 const path = require("path");
 
 const loadMainWindow = () => {
@@ -15,7 +15,17 @@ const loadMainWindow = () => {
     //mainWindow.webContents.openDevTools();
 }
 
-app.on("ready", loadMainWindow);
+app.on("ready", async () => {
+    if (process.platform === "darwin") {
+        const status = systemPreferences.getMediaAccessStatus("camera");
+        console.log("Camera access status:", status);
+        if (status !== "granted") {
+            const granted = await systemPreferences.askForMediaAccess("camera");
+            console.log("Camera access granted:", granted);
+        }
+    }
+    loadMainWindow();
+});
 app.on("window-all-closed", () => {
     if (process.platform !== "darwin") {
         app.quit();

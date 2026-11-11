@@ -10,7 +10,7 @@
   "author": "EffectsSDK",
   "license": "MIT",
   "devDependencies": {
-    "electron": "36.0.0",
+    "electron": "39.2.7",
     "electron-packager": "^15.5.1"
   }
 }
